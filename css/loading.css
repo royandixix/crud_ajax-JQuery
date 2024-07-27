@@ -1,0 +1,8 @@
+.load{
+    width: 40px;
+    position: absolute;
+    top: 180;
+    margin-left: 5px;
+    bacground: transparent;
+    display: none;
+}
