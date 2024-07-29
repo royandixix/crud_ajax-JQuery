@@ -17,73 +17,55 @@ if (isset($_POST["cari"])) {
     $yes = cari($_POST["keyword"]);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
+
+
+
+
+
+
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, 
-    initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Halaman Admin</title>
+    <style>
+        @media print {
+            .logout {
+                display: none;
+            }
+
+            .btn-blue {
+                display: none;
+            }
+            
+        }
+    </style>
+</head>
 
 <body>
     <div class="container">
         <div class="header">
             <h1>Daftar Anak Mahasiswa Magang</h1>
-            <a href="logout.php">Logout</a>
+            <a href="logout.php" class="logout">Logout</a>
         </div>
 
         <form action="" method="post" class="form-container">
             <a href="add.php" class="btn-blue">Tambah Data</a>
             <input type="text" name="keyword" id="keyword" placeholder="Cari data" autofocus autocomplete="off">
             <button type="submit" name="cari" id="tombol-cari" class="btn-green">Cari</button>
-            
-
             <img src="animation/Spinner@1x-1.0s-200px-200px.gif" class="load">
         </form>
-        <!-- pagination -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <div id="container">
             <table>
